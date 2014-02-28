@@ -1,0 +1,16 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    knut_tools (0.1.0)
+    log4r (1.1.10)
+    rake (10.1.1)
+    rake4latex (0.1.3)
+      knut_tools
+      log4r
+      rake
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake4latex

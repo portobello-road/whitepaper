@@ -1,0 +1,4 @@
+\newcommand{\dotgraph}[1]{
+  \write18{bash -c "dot #1 | `which dot2tex` --figonly --usepdflatex -ftikz -o #1.tmp.tex"}
+  \IfFileExists{#1.tmp.tex}{ \input{#1.tmp.tex} }{}
+}

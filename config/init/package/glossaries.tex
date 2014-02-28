@@ -1,0 +1,6 @@
+% enable the automatic creation of glossaries
+\usepackage[acronym]{glossaries}
+\makeglossaries
+% so that we don't have to \protect the \gls function inside paragraph function arguments
+\usepackage{etoolbox}
+\robustify{\gls}

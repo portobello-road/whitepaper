@@ -1,0 +1,19 @@
+%%
+%
+% !!! NOTE !!!
+% Project-sepecific packages and styles are defined in lib/, look there as well
+%
+%%
+
+% This must be initialized first to deal with \documentclass and 
+% \usepackage precedence requirements.
+\input{config/init/subsystem/layout.tex}
+
+% Add support for multiple languages
+\input{config/init/subsystem/language_support.tex}
+
+% Include generic utilities which perform tasks like enabling multi-line
+% comments, etc.
+\input{config/init/subsystem/utilities.tex}
+
+\input{config/init/subsystem/programming_language_support.tex}

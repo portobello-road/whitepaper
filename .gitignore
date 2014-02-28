@@ -1,0 +1,16 @@
+# Build artifacts
+*.pdf
+*.aux
+*.idx
+*.ind
+*.ilg
+*.log
+*.toc
+*.glo
+*.ist
+*.nlo
+*.glg
+*.gls
+*.acn
+*.lof
+*.out

@@ -1,0 +1,62 @@
+% Welcome to 'Portobello Road' fellow explorer. The document source code is
+% typeset using mostly standard LaTeX with some widely used AMS extensions.
+
+% Read through linearly and you'll find comments like these guiding you through
+% the source code so that it will be easy to make changes even if you've not
+% worked with LaTeX before and to make it as easy as possible to learn more
+% about LaTeX.
+
+% If you have any questions about specific syntax or tags a good strategy is to
+% use google and search for the syntax or function you're curious about followed
+% by 'LaTeX' with that exact capitalisation. See the WikiBooks article at
+% http://en.wikibooks.org/wiki/LaTeX/Introduction for an excellent introduction
+% to LaTeX.
+
+% We're currently in the part of the LaTeX document, herein referred to simply
+% as the document, which is known as the 'Preamble'.
+% See http://en.wikibooks.org/wiki/LaTeX/Document_Structure for more information
+% about how this document is structured. We'll refer to terms defined there
+% from time to time throughout this document.
+
+% At this point in the Preamble we begin rendering system initialization.
+
+% The \input tag is a function which includes the contents of the file
+% specified just as if they had been copy and pasted right into this file.
+% The file path is relative to the project root. 
+\input{config/init/system.tex}
+
+% define terms used throughout the text that may be jargon or usage specific
+% these are non-printing entries used later in the document
+\input{content/portobello_road/glossaries/default/entries.tex}
+
+% Here we create a new document context using the matching \begin and \end
+% tags. Inside this context we will declare our Top Matter and the rest of
+% the work.
+\begin{document}
+
+  \input{content/portobello_road/top_matter/title.tex}
+
+  \input{content/portobello_road/parts/abstract.tex}
+  
+  \input{content/portobello_road/addenda/table_of_contents.tex}
+  \input{content/portobello_road/addenda/foreword.tex}
+  \input{content/portobello_road/addenda/conventions.tex}
+  
+  \input{content/portobello_road/parts/impetus.tex}
+  \input{content/portobello_road/parts/architecture.tex}
+  \input{content/portobello_road/parts/components.tex}
+  \input{content/portobello_road/parts/communication.tex}
+  \input{content/portobello_road/parts/conformance.tex}
+  \input{content/portobello_road/parts/reference_implementation.tex}
+  
+  \part{Addenda}
+  \input{content/portobello_road/glossaries/default/listing.tex}
+  \input{content/portobello_road/addenda/list_of_figures.tex}
+  \input{content/portobello_road/addenda/index.tex}
+  
+  \part{Appendices}
+  \appendix
+  \input{content/portobello_road/appendices/rfc2119.tex}
+  \input{content/portobello_road/appendices/semver.tex}
+
+\end{document}
