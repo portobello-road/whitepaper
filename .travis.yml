@@ -4,6 +4,7 @@ rvm:
 before_install:
 - sudo apt-get update -qq
 - sudo apt-get install -qq texlive-full python-pygments
+script: "./build.sh"
 deploy:
   provider: s3
   access_key_id: AKIAI4DI7JNB62WHUG2A
