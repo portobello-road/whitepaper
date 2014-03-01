@@ -5,6 +5,14 @@
 %
 %%
 
+\input{config/style.tex}
+
+% Enable flow control for configuration below
+\input{config/init/subsystem/flow_control.tex}
+
+% Configuration
+\input{config/control.tex}
+
 % This must be initialized first to deal with \documentclass and 
 % \usepackage precedence requirements.
 \input{config/init/subsystem/layout.tex}
@@ -16,4 +24,8 @@
 % comments, etc.
 \input{config/init/subsystem/utilities.tex}
 
+% Syntax Highlighting, etc.
 \input{config/init/subsystem/programming_language_support.tex}
+
+% Helpers
+\input{config/init/subsystem/helpers.tex}

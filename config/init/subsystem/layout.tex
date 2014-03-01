@@ -1,10 +1,7 @@
-% use the amsbook style, default to 10pt font and use double sided formatting
-% options
-\documentclass[twoside]{amsbook}
-\numberwithin{figure}{chapter}
-
-% ensure index is built for amsbook
-% \makeindex
+\iftoggle{includeIndex}{
+  %ensure index is built for amsbook
+  \makeindex
+}
 
 \input{config/init/package/ams.tex}
 

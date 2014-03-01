@@ -12,5 +12,5 @@ and run rake. The PDF file will be placed in the project root.
 
 Build tested with Ubuntu 12.04 LTS with the following packages:
 
-* texlive
-* texlive-extra-utils
+* texlive-full
+* python-pygments

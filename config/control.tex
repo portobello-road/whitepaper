@@ -1,0 +1,33 @@
+%%
+% Variables and other configuration
+%
+% We use \newcommand here because \def will redefine package macros without warning
+%  as you can imagine, this causes a special kind of hell to erupt
+%
+% Prefix all commands with \PRcommandPrefix
+%
+% Example: ( % is a newline indicator for the runtime )
+%   \newcommand{\PRexampleCommand}[1]{
+%      This is the output of PRexampleCommand. This is the first parameter #1!
+%   }
+%%
+
+% Document functions which cause build problems if they're unused
+% now but will be used later (in the document development process)
+\newtoggle{includeGlossaries}
+\togglefalse{includeGlossaries}
+
+\newtoggle{includeIndex}
+\togglefalse{includeIndex}
+
+\newtoggle{includeListOfFigures}
+\togglefalse{includeListOfFigures}
+
+% Titles and other metadata
+\newcommand{\PRcurrentLang}[0]{
+en-au
+}
+
+\newcommand{\PRVersion}[0]{
+DEV-UNRELEASED
+}

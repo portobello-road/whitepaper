@@ -23,7 +23,7 @@ file 'portobello_road.pdf' => 'portobello_road.tex'
 task :touch => 'portobello_road.tex'
 
 task :clean do
-  list = Rake::FileList["**/*.toc", "**/*.ind", "**/*.idx", "**/*.ilg", "**/*.log", "**/*.aux", "**/*.glo", "**/*.ist", "**/*.nlo", "**/*.acn", "**/*.glg", "**/*.gls", "**/*.acr", "**/*.alg", "**/*.tmp.dot", "**/*.tmp.tex", "**/*.out", "**/*.lof"]
+  list = Rake::FileList["**/*.toc", "**/*.ind", "**/*.idx", "**/*.ilg", "**/*.log", "**/*.aux", "**/*.glo", "**/*.ist", "**/*.nlo", "**/*.acn", "**/*.glg", "**/*.gls", "**/*.acr", "**/*.alg", "**/*.tmp.dot", "**/*.tmp.tex", "**/*.out", "**/*.lof", "**/*.pyg", "*.pdf"]
   list.each do |file|
     FileUtils.rm(file)
   end
@@ -37,7 +37,12 @@ task :default do |t, args|
   Rake::Task[:make_glossaries].execute
   Rake::Task['portobello_road.pdf'].execute
   Rake::Task[:statistic].execute
+  Rake::Task[:cp_build_product].execute
   Rake::Task[:clean].execute
+end
+
+task :cp_build_product do |t, args|
+  sh "cp portobello_road.pdf build/"
 end
 
 task :make_glossaries do |t, args|
