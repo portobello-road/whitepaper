@@ -3,7 +3,7 @@ rvm:
 - 1.9.3
 before_install:
 - sudo apt-get update -qq
-- sudo apt-get install -qq texlive texlive-science python-pygments
+- sudo apt-get install -qq texlive texlive-science texlive-latex-extra etoolbox python-pygments
 script: "./build.sh"
 deploy:
   provider: s3
