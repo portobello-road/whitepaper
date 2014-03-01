@@ -1,0 +1,17 @@
+language: ruby
+rvm:
+- 1.9.3
+before_install:
+- sudo apt-get update -qq
+- sudo apt-get install -qq texlive-full python-pygments
+deploy:
+  provider: s3
+  access_key_id: AKIAI4DI7JNB62WHUG2A
+  secret_access_key:
+    secure: PqGN+UxG1+mPenT8m970dFgxl8mihUQOMAXMp/PuoHkhUKX5gLVetBSD3J5lPILQMLkwzwZf5r+Zz6poP6Dxt2ApOyvQslhfc7ANEy5ClfMXdwON7ka+NML3ueY20XHBdD+DLgZwUojZDaH3fvNve8Bwk0CFqIygJVw7rlHRIys=
+  bucket: pr-whitepaper-dev
+  local-dir: build
+  skip_cleanup: true
+  on:
+    repo: portobello-road/whitepaper
+    branch: develop
