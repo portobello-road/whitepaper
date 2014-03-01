@@ -1,6 +1,6 @@
 #!/bin/sh
 
-rake
+bundle exec rake
 
 if [ -f ./portobello_road.log ]; then
   cat ./portobello_road.log
