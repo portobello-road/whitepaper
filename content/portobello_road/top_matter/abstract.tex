@@ -6,36 +6,50 @@ Portobello Road is built on a multihub-client model. Hubs are individual servers
 which may be clustered together or connected into federations of optionally
 clustered hubs. Clients connect to one or more of these federations and coalesce
 their available information, initiate transactions and coordinate communications
-amongst identities in the system.
+amongst entities in the system.
 
-Communications between identities are protected by a modified OTR messaging
+Communications between entities are protected by a modified OTR messaging
 protocol which provides for deniable secure communications by which to arrange
 transactions asynchronously. Because of this, network and network service
 providers, such as escrow agents, remain ignorant about the true nature of the
 transactions undertaken by their clients. The only parties with access to the
-details of the transaction are buyer and merchant and there is no way for the
-merchant to prove to others after the fact that the buyer did indeed create the
-specified transaction.
+details of the transaction are those entities directly envolved in the transaction
+of physical goods and services and there is no way for a single participant in
+the transaction to prove to others after the fact that the other party did 
+indeed create the specified transaction.
 
-Escrow decisions are put directly into the hands of the counterparties involved
+Escrow decisions are put directly into the hands of the entities involved
 by requiring the creation of a Nash equilibrium between them (a technique
 also known as Mutually Assured Destruction). This allows escrow to be automated
-and escrow agents are no longer required to be adjudicators, only to follow the
-escrow protocol and to not abscond with the money in transit. If multiparty
-authorisation is supported by the agreed upon settlement method, escrow agents
-need only be trusted to follow the escrow protocol -- adherance to which is
-verifiable.
+and escrow agents are no longer required to be adjudicators in the case of
+disagreement, only to follow the escrow protocol and to not abscond with the
+money in transit. If multiparty authorisation is supported by the agreed upon
+settlement method, escrow agents need only be trusted to follow the escrow
+protocol -- adherance to which is verifiable. The value wagered is not necessarily
+equal to the value exchanged by parties to the transaction.
+
+Unlike traditional escrow, in this system escrow agents do not remit to a party
+other than from which the wagered funds were received. Should a transaction be
+successful, the funds which created the Nash equilibrium between transacting
+parties are returned to the sending party. Should a transaction
+fail, the funds are `destroyed' according to each agent's policy at the direction
+of either transaction participant -- a policy agreed to by all parties. An
+escrow agent may either choose to keep `destroyed' funds or not,
+with the ascent of all parties. Finally, an escrow agent may choose to require
+direct payment from both, either or neither other party to the transaction.
+Market forces are expected to decide which mechanism for incentivising escrow
+agents is more appropriate.
 
 Distribution is acheived via federation and clustering. Federation is a special
 case of clustering in which hub operators may put in place policies which affect
 the traffic flowing between clusters of hubs. This permits hub operators the
-freedom to charge for access to their network of merchants and for carrying
-transaction information between identities. This is effectively how Internet
-peering works today. Addtionally, hub operators may charge clients for access to
-their network of merchants and may, as they are no longer needed to provide the
-escrow functionality centralised marketplaces typically provide, charge
-merchants for access to their clients. This allows costs to users to reflect the
-true cost of maintaining the hub system and federation model.
+freedom to charge or to not charge for access to their network of merchants and
+for carrying transaction information between identities. This is effectively how
+Internet peering works today. Addtionally, hub operators may charge clients for
+access to their network of merchants and may, as they are no longer needed to
+provide the escrow functionality centralised marketplaces typically provide,
+charge merchants for access to their clients. This allows costs to users to
+reflect the true cost of maintaining the hub system and federation model.
 
 By these mechanisms, Portobello Road provides for a need-to-know market in which
 buyers and sellers may transact, escrow and settle freely and without coercion.
